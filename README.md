@@ -33,3 +33,6 @@ python3 -m unittest discover -s tests -v
 - finance/__main__.py — точка входу.
 - tests/test_finance.py — перевірки бізнес-сценаріїв.
 - docs/technical.md — структура даних та функції.
+
+## Частина 2 — сервер
+Сервер Node.js/Express з ORM, DI, міграціями, трьома CRUD-ресурсами та Swagger у [server/](server/README.md). Колекція Postman: [server/docs/postman.json](server/docs/postman.json). Частина1 збережена у коміті3eb8d50.

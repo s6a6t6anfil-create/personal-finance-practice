@@ -1,3 +1,4 @@
+import './styles/dashboard.scss';
 import {useEffect,useState} from 'react';import {useServices} from './services/context';import {money} from './utils/money';import Field from './components/Field';import StatusMessage from './components/StatusMessage';import MetricCard from './components/MetricCard';import EmptyState from './components/EmptyState';
 export default function Dashboard(){const {api,preferences}=useServices();const [month,setMonth]=useState(()=>preferences.read('finance.month',new Date().toISOString().slice(0,7))),[report,setReport]=useState(null),[cats,setCats]=useState([]),[loading,setLoading]=useState(false),[error,setError]=useState('');
  async function load(){setLoading(true);setError('');try{const [r,c]=await Promise.all([api.report(month),api.list('categories')]);setReport(r);setCats(c);}catch(e){setError(e.message);}finally{setLoading(false);}}

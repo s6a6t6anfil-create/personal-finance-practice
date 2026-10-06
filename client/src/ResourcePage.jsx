@@ -1,3 +1,4 @@
+import './styles/resource-page.scss';
 import {useEffect,useState} from 'react';import {useServices} from './services/context';import {money} from './utils/money';import DataTable from './components/DataTable';import ResourceForm from './components/ResourceForm';import StatusMessage from './components/StatusMessage';import ConfirmDialog from './components/ConfirmDialog';
 const titles={categories:'Категорії',transactions:'Доходи та витрати',budgets:'Місячні бюджети'};
 export default function ResourcePage({resource}){

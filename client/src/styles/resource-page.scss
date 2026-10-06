@@ -1,0 +1,2 @@
+@use 'mixins' as m;
+.workspace{display:grid;grid-template-columns:300px minmax(0,1fr);gap:24px;align-items:start;@include m.mobile{grid-template-columns:1fr;}}

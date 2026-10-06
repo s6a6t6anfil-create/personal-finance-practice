@@ -1,0 +1,1 @@
+@use '../mixins' as m;.metric{@include m.card;p{font-size:13px;color:#60766e;}strong{font-size:clamp(18px,2.2vw,27px);overflow-wrap:anywhere;}small{display:block;}}

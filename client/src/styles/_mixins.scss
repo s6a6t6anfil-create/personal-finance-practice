@@ -1,0 +1,2 @@
+@mixin mobile{@media(max-width:760px){@content;}}
+@mixin card{background:#fff;border:1px solid #d7e1d8;border-radius:16px;padding:24px;}

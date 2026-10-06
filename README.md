@@ -36,3 +36,6 @@ python3 -m unittest discover -s tests -v
 
 ## Частина 2 — сервер
 Сервер Node.js/Express з ORM, DI, міграціями, трьома CRUD-ресурсами та Swagger у [server/](server/README.md). Колекція Postman: [server/docs/postman.json](server/docs/postman.json). Частина1 збережена у коміті3eb8d50.
+
+## Частина 3 — клієнт
+[React/SCSS клієнт та інструкція спільного запуску](client/README.md). Браузерна перевірка і звіт ще в роботі.

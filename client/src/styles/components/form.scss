@@ -1,0 +1,1 @@
+@use '../mixins' as m;.resource-form{@include m.card;}.form-error{font-size:14px;color:#a12635;}

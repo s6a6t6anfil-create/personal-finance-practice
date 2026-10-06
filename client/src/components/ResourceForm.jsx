@@ -14,7 +14,7 @@ export default function ResourceForm({resource,categories,row,busy,onSave,onCanc
  <Field label="Категорія"><select required value={form.categoryId} onChange={e=>set('categoryId',e)}><option value="">Оберіть категорію</option>{categories.map(c=><option key={c.id} value={c.id}>{c.name}</option>)}</select></Field>
  {resource==='transactions'&&<Field label="Тип операції"><select value={form.kind} onChange={e=>set('kind',e)}><option value="expense">Витрата</option><option value="income">Дохід</option></select></Field>}
  <Field label={resource==='budgets'?'Ліміт, грн':'Сума, грн'}><input required inputMode="decimal" placeholder="0,00" value={form.amount} onChange={e=>set('amount',e)}/></Field>
- <Field label={resource==='budgets'?'Місяць':'Дата'}><input required type={resource==='budgets'?'month':'date'} min={resource==='budgets'?'1900-01':'1900-01-01'} value={resource==='budgets'?form.month:form.occurredOn} onChange={e=>set(resource==='budgets'?'month':'occurredOn',e)}/></Field>
+ <Field label={resource==='budgets'?'Місяць':'Дата'}><input required type={resource==='budgets'?'month':'date'} min={resource==='budgets'?'1900-01':'1900-01-01'} value={resource==='budgets'?form.month:form.occurredOn} onInput={e=>set(resource==='budgets'?'month':'occurredOn',e)}/></Field>
  {resource==='transactions'&&<Field label="Примітка"><textarea maxLength={500} value={form.note} onChange={e=>set('note',e)}/></Field>}</>}
  {error&&<p role="alert" className="form-error">{error}</p>}<div className="actions"><button className="primary" disabled={busy}>{busy?'Збереження…':'Зберегти'}</button>{row&&<button type="button" onClick={onCancel} disabled={busy}>Скасувати</button>}</div></form>;
 }
